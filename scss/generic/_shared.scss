@@ -1,0 +1,12 @@
+html {
+  font-family: 'Gayathri', 'Tajawal', sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  color: $main-dark-color;
+}
+body {
+  font-size: 14px; /* px fallback */
+  font-size: 1.4rem; /* default font-size for document */
+  overflow-x: hidden;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,140 @@
+.e-form-group {
+  position: relative;
+
+  &--withMargin {
+    margin-bottom: 2rem;
+  }
+}
+
+.e-form-control {
+  width: 100%;
+  
+  border: unset;
+  border-bottom: 1px solid $main-dark-color;
+  
+  color: $main-dark-color;
+  font-size: 1.8rem;
+
+  padding: 2rem 5px;
+
+  &::placeholder {
+    color: $main-dark-color;
+  }
+
+  &:focus {
+    border-color: $main-color;
+    outline: none;
+  }
+
+  &:focus, &.ng-dirty {
+    ~ .e-form-label--overInput {
+      top: -50px;
+      color: $main-color;
+    }
+  }
+
+  &--readOnly {
+    border-bottom: unset;
+  }
+
+  &--checkbox {
+    position: absolute;
+    visibility: hidden;
+    color: $main-color;
+    
+    ~ .custom-checkbox {
+      display: inline-block;
+      border: 2px solid $main-color;
+      vertical-align: text-bottom;
+      border-radius: 2px;
+      @include square(18px);
+    }
+
+    &:checked {
+
+      ~ .custom-checkbox {
+        font-size: 18px;
+        border-color: rgba($color: #000000, $alpha: 0);
+      }
+      
+    }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    ~ .e-form-label--overInput {
+      top: -50px;
+      color: $main-color;
+    }
+  }
+}
+
+.e-form-label {
+  cursor: pointer;
+  color: $main-dark-color;
+  font-size: 1.8rem;
+  @include transition(all);
+
+  &--overInput {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 18px;
+  }
+}
+
+.e-form-search {
+  height: 30px;
+  border: 1px solid $main-color;
+  color: $main-color;
+  padding: 0 30px;
+  border-radius: 3px;
+  font-size: 1.6rem;
+
+  &::placeholder {
+    font-weight: bold;
+    color: $main-color;
+  }
+
+  ~.icon-search {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-size: 1.6rem;
+  }
+}
+
+.e-form-radio {
+  position: absolute;
+  visibility: hidden;
+
+  ~ .custom-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include square(20px);
+    background-color: #fff;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    @include transition(all);
+  }
+
+  &:checked {
+
+    ~ .custom-radio {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+
+input[type="file"] {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}

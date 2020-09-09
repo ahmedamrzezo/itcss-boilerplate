@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// settings
+@import "./assets/scss/settings/variables";
+@import "./assets/scss/settings/global";
+
+// tools
+@import "./assets/scss/tools/mixins";
+
+// generic
+@import "./assets/scss/generic/box-sizing";
+@import "./assets/scss/generic/normalize";
+@import "./assets/scss/generic/reset";
+@import "./assets/scss/generic/shared";
+
+// elements
+@import "./assets/scss/elements/buttons";
+@import "./assets/scss/elements/forms";
+@import "./assets/scss/elements/headings";
+@import "./assets/scss/elements/paragraphs";
+@import "./assets/scss/elements/links";
+@import "./assets/scss/elements/lists";
+
+// objects
+@import "./assets/scss/objects/animations";
+@import "./assets/scss/objects/layout";
+@import "./assets/scss/objects/overlays";
+
+// components
+
+// trumps
+@import "./assets/scss/trumps/utilities";

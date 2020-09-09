@@ -1,0 +1,40 @@
+.e-main-btn {
+  @include resetBtn;
+  @include box(350, 55);
+  background-color: $main-color;
+  color: #fff;
+  font-size: 2.4rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  @include transition(background-color);
+
+  &--withPadding {
+    width: auto;
+    height: auto;
+    padding: 10px 40px;
+  }
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.c-text-btn {
+  @include resetBtn;
+  color: $main-color;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: transparent;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.e-secondary-btn {
+  @include resetBtn;
+  padding: 7px 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: $main-color;
+  color: #fff;
+}

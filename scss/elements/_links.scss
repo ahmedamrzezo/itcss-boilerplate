@@ -1,0 +1,32 @@
+a.e-link {
+  color: $main-color;
+  cursor: pointer;
+  @include transition(color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--noStyle {
+    color: #fff;
+    &:hover {
+      text-decoration: unset;
+    }
+  }
+}
+
+.e-icon-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: $border-radius;
+  @include transition(all);
+
+  &:hover, &--active {
+    background-color: #fff;
+    color: $main-light-color;
+  }
+}

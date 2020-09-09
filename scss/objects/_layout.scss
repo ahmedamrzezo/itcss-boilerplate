@@ -1,0 +1,49 @@
+.o-vertical-centralize {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: max-content;
+}
+.o-horizontal-centralize {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+.o-flex-centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-card {
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.o-section-content {
+  background-color: #fff;
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  padding: 3rem;
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+}
+
+.o-full-height {
+  height: 100%;
+}

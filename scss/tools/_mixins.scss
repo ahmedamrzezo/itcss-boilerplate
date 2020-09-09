@@ -1,0 +1,53 @@
+@mixin transition($for, $dur: 0.3) {
+  transition: $for #{$dur}s ease-in-out;
+  transition: $for #{$dur}s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin box($x, $y,$unit: px) {
+  width: $x + $unit;
+  height: $y + $unit;
+}
+
+@mixin resetBtn {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  &:focus {
+    outline: unset;
+  }
+}
+
+@mixin customDropDown {
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    width: auto;
+    height: auto;
+    left: 100%;
+    top: 0;
+    border: unset;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    margin-left: 1rem;
+    transform: scale(0);
+    @include transition(all);
+  } 
+
+  .dropdown-item {
+    font-size: 1.6rem;
+    color: $main-dark-color;
+    padding: 5px 20px;
+  }
+
+  &:hover {
+    .dropdown-menu {
+      opacity: 1;
+      transform: scale(1);
+    } 
+  }
+}
